@@ -1,0 +1,117 @@
+{
+  "skill": {
+    "language": ["HTML", "(S)CSS", "JavaScript(ES6)", "TypeScript"],
+    "frontend": ["React", "Vue", "NextJS", "NuxtJS", "Gatsby"],
+    "ui": ["Material UI", "BootStrap"],
+    "backend": ["NodeJS", "NestJS", "Express", "Graphql", "Apollo Server"],
+    "database": ["MySQL", "MongoDB"],
+    "devops": ["Docker"],
+    "version": ["Git", "GitHub"],
+    "CMS": ["WordPress"]
+  },
+  "work": [
+    {
+      "title": "Full-stack developer",
+      "company": "Forexco. Management",
+      "date": "Feb 2021 - Present",
+      "location": "Wynyard",
+      "desc": [
+        "Develop, test, implement and maintain new user-facing features",
+        "Build and integrate APIs for/from CMS and CRM",
+        "Design, develop and enhance automated reports for internal and external stakeholders",
+        "Resolve coding issues, develop additional features and bug-fixes"
+      ]
+    },
+    {
+      "title": "Full-stack developer intern",
+      "company": "iShare Incubater",
+      "date": "May 2020 - Aug 2020",
+      "location": "Wynyard",
+      "desc": [
+        "Develop and implement front UI and backend logic of a property management web application",
+        "Create and update API, manage database"
+      ]
+    },
+    {
+      "title": "Front-end developer intern",
+      "company": "NetStripes",
+      "date": "Oct 2018 - Jan 2019",
+      "location": "Pyrmont",
+      "desc": [
+        "Assist WordPress theme development based on designs",
+        "Administrate integrations with CRM platforms, manage website’s plugins",
+        "Contribute to digital transformation solution"
+      ]
+    }
+  ],
+  "project": [
+    {
+      "title": "Minesweeper Clone",
+      "desc": ["Clone of Window game MineSweeper", "Practicing TypeScript"],
+      "live": "https://cocky-meninsky-1cd43d.netlify.app/",
+      "github": "https://github.com/Dongongngg/minesweeper",
+      "tech": ["TypeScript", "React", "SCSS"],
+      "img": "s"
+    },
+    {
+      "title": "SimpleBlog",
+      "desc": [
+        "Fetch data from a WordPress site's api, display content as a blog page",
+        "Clean design"
+      ],
+      "live": "https://sharp-ramanujan-84a1e6.netlify.app/",
+      "github": "https://github.com/Dongongngg/simple-blog",
+      "tech": [
+        "TypeScript",
+        "React",
+        "Material UI",
+        "Axios",
+        "React Router",
+        "useContext"
+      ],
+      "img": "s"
+    },
+    {
+      "title": "Job List",
+      "desc": [
+        "Full-stack application that allows users to signin/signup, CRUD and filter job applications",
+        "MERN stack"
+      ],
+      "live": "https://aqueous-dawn-60527.herokuapp.com/",
+      "github": "https://github.com/Dongongngg/job-listing",
+      "tech": [
+        "Node",
+        "React",
+        "React Router",
+        "Express",
+        "Mongoose",
+        "MongoDB",
+        "JWT",
+        "REST api"
+      ],
+      "img": "s"
+    },
+    {
+      "title": "Storytelling Game",
+      "desc": [
+        "Storytelling game I made for an assignment of an university's teaching course",
+        "It scores 58/60"
+      ],
+      "live": "https://eduf3037-game.netlify.app/",
+      "github": "https://github.com/Dongongngg/eduf3037-game",
+      "tech": ["React", "SASS"],
+      "img": "s"
+    },
+    {
+      "title": "My Portfolio",
+      "desc": [
+        "Using Material UI theme to create reusable styles and layouts",
+        "This page"
+      ],
+      "live": "https://www.jingfudong.com",
+      "github": "https://github.com/Dongongngg/portfolio-new",
+      "tech": ["TypeScript", "React", "Material UI"],
+      "img": "s"
+    }
+  ]
+}
