@@ -11,48 +11,50 @@ import DescriptionIcon from '@material-ui/icons/Description';
 const Footer: React.FC = () => {
   const classes = useStyles();
   return (
-    <Container maxWidth={false} className={classes.root}>
-      <Container maxWidth='sm' className={classes.navWrapper}>
-        <GitHubIcon
-          fontSize='large'
-          className={classes.icon}
-          onClick={() => {
-            window.open('https://github.com/Dongongngg');
-          }}
-        />
-        <LinkedInIcon
-          fontSize='large'
-          className={classes.icon}
-          onClick={() => {
-            window.open('https://www.linkedin.com/in/jingfu-dong-james/');
-          }}
-        />
-        <EmailIcon
-          fontSize='large'
-          className={classes.icon}
-          onClick={() => {
-            window.open('mailto:jingfu.dong0320@gmail.com');
-          }}
-        />
-        <DescriptionIcon
-          fontSize='large'
-          className={classes.icon}
-          onClick={() => {
-            window.open('Resume_Jingfu_Dong.pdf');
-          }}
-        />
-      </Container>
+    <footer>
+      <Container maxWidth={false} className={classes.root}>
+        <Container maxWidth='sm' className={classes.navWrapper}>
+          <GitHubIcon
+            fontSize='large'
+            className={classes.icon}
+            onClick={() => {
+              window.open('https://github.com/Dongongngg');
+            }}
+          />
+          <LinkedInIcon
+            fontSize='large'
+            className={classes.icon}
+            onClick={() => {
+              window.open('https://www.linkedin.com/in/jingfu-dong-james/');
+            }}
+          />
+          <EmailIcon
+            fontSize='large'
+            className={classes.icon}
+            onClick={() => {
+              window.open('mailto:jingfu.dong0320@gmail.com');
+            }}
+          />
+          <DescriptionIcon
+            fontSize='large'
+            className={classes.icon}
+            onClick={() => {
+              window.open('Resume_Jingfu_Dong.pdf');
+            }}
+          />
+        </Container>
 
-      <Typography variant='h5' align='center'>
-        © Jingfu Dong
-      </Typography>
-      <Typography variant='body1' align='right' className={classes.claim}>
-        Design inspired by{' '}
-        <Typography component='a' href='https://manparvesh.com/' className={classes.claimName}>
-          Man Parvesh Singh Randhawa
+        <Typography variant='h5' align='center'>
+          © Jingfu Dong
         </Typography>
-      </Typography>
-    </Container>
+        <Typography variant='body1' align='right' className={classes.claim}>
+          Design inspired by{' '}
+          <Typography component='a' href='https://manparvesh.com/' className={classes.claimName}>
+            Man Parvesh Singh Randhawa
+          </Typography>
+        </Typography>
+      </Container>
+    </footer>
   );
 };
 

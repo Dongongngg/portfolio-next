@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Grid, Typography, Avatar } from '@material-ui/core';
 import { makeStyles, Theme } from '@material-ui/core/styles';
+
 //  mui icons
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';

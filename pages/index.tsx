@@ -1,6 +1,5 @@
 import React from 'react';
-//  mui
-import { CssBaseline } from '@material-ui/core';
+import { NextSeo } from 'next-seo';
 //  components
 import NavBar from '../components/NavBar';
 import Banner from '../components/Banner';
@@ -10,14 +9,29 @@ import ProjectHolder from '../components/ProjectHolder';
 import Footer from '../components/Footer';
 //  layout
 import PortfolioLayout from '../layouts/Portfolio';
-//  theme
-import { ThemeProvider } from '@material-ui/core/styles';
-import theme from '../styles/theme';
 
 const LandingPage: React.FC = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <>
+      <NextSeo
+        title='Jingfu Dong portfolio'
+        description='Full-stack developer'
+        openGraph={{
+          url: 'https://www.jingfudong.com',
+          title: 'Jingfu Dong',
+          description: 'Full-stack developer',
+          images: [
+            {
+              url: '/avatar.jpg',
+              width: 800,
+              height: 600,
+              alt: 'Jingfu Dong',
+            },
+          ],
+          site_name: 'Jingfu Dong portfolio',
+        }}
+      />
+
       <NavBar />
       <PortfolioLayout
         banner={<Banner />}
@@ -25,10 +39,8 @@ const LandingPage: React.FC = () => {
         work={<WorkExpHolder />}
         project={<ProjectHolder />}
       />
-      <footer>
-        <Footer />
-      </footer>
-    </ThemeProvider>
+      <Footer />
+    </>
   );
 };
 
