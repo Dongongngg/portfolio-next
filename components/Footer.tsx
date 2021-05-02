@@ -44,12 +44,17 @@ const Footer: React.FC = () => {
           />
         </Container>
 
-        <Typography variant='h5' align='center'>
+        <Typography variant='h4' align='center'>
           © Jingfu Dong
         </Typography>
-        <Typography variant='body1' align='right' className={classes.claim}>
+        <Typography variant='body2' align='right' className={classes.claim}>
           Design inspired by{' '}
-          <Typography component='a' href='https://manparvesh.com/' className={classes.claimName}>
+          <Typography
+            variant='body2'
+            component='a'
+            href='https://manparvesh.com/'
+            className={classes.claimName}
+          >
             Man Parvesh Singh Randhawa
           </Typography>
         </Typography>

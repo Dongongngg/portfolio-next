@@ -35,7 +35,7 @@ const NavDrawer: React.FC<any> = ({ handleToggle }) => {
   return (
     <List className={classes.list}>
       <ListSubheader className={classes.drawerTitle}>
-        <Typography variant='h5'>Call me James :)</Typography>
+        <Typography variant='h3'>Call me James :)</Typography>
       </ListSubheader>
 
       <Divider />
@@ -83,7 +83,7 @@ const NavBar: React.FC = () => {
           </Drawer>
         </Hidden>
         <Hidden xsDown>
-          <Typography variant='h6' className={classes.title} onClick={() => scrollToId('about')}>
+          <Typography variant='h3' className={classes.title} onClick={() => scrollToId('about')}>
             Jingfu Dong
           </Typography>
           {naviItem.map(e => (

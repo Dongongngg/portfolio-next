@@ -26,13 +26,13 @@ const SkillHolder: React.FC = () => {
             <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
               <Container maxWidth='lg'>
                 <CodeIcon fontSize='large' color='secondary' />
-                <Typography variant='h4'>Language</Typography>
+                <Typography variant='h3'>Language</Typography>
               </Container>
             </Grid>
             <Grid item xs={6} md={8} className={classes.typeContentWrapper}>
               <Container maxWidth='lg'>
                 {data.skill.language.map((e, i) => (
-                  <Typography key={i} variant='h5'>
+                  <Typography key={i} variant='h4'>
                     {e}
                   </Typography>
                 ))}
@@ -45,13 +45,13 @@ const SkillHolder: React.FC = () => {
             <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
               <Container maxWidth='lg'>
                 <FlipToFrontIcon fontSize='large' color='secondary' />
-                <Typography variant='h4'>Front-end</Typography>
+                <Typography variant='h3'>Front-end</Typography>
               </Container>
             </Grid>
             <Grid item xs={6} md={8} className={classes.typeContentWrapper}>
               <Container maxWidth='lg'>
                 {data.skill.frontend.map((e, i) => (
-                  <Typography key={i} variant='h5'>
+                  <Typography key={i} variant='h4'>
                     {e}
                   </Typography>
                 ))}
@@ -64,13 +64,13 @@ const SkillHolder: React.FC = () => {
             <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
               <Container maxWidth='lg'>
                 <FlipToFrontIcon fontSize='large' color='secondary' />
-                <Typography variant='h4'>UI</Typography>
+                <Typography variant='h3'>UI</Typography>
               </Container>
             </Grid>
             <Grid item xs={6} md={8} className={classes.typeContentWrapper}>
               <Container maxWidth='lg'>
                 {data.skill.ui.map((e, i) => (
-                  <Typography key={i} variant='h5'>
+                  <Typography key={i} variant='h4'>
                     {e}
                   </Typography>
                 ))}
@@ -83,13 +83,13 @@ const SkillHolder: React.FC = () => {
             <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
               <Container maxWidth='lg'>
                 <FlipToBackIcon fontSize='large' color='secondary' />
-                <Typography variant='h4'>Back-end</Typography>
+                <Typography variant='h3'>Back-end</Typography>
               </Container>
             </Grid>
             <Grid item xs={6} md={8} className={classes.typeContentWrapper}>
               <Container maxWidth='lg'>
                 {data.skill.backend.map((e, i) => (
-                  <Typography key={i} variant='h5'>
+                  <Typography key={i} variant='h4'>
                     {e}
                   </Typography>
                 ))}
@@ -102,13 +102,13 @@ const SkillHolder: React.FC = () => {
             <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
               <Container maxWidth='lg'>
                 <StorageIcon fontSize='large' color='secondary' />
-                <Typography variant='h4'>Database</Typography>
+                <Typography variant='h3'>Database</Typography>
               </Container>
             </Grid>
             <Grid item xs={6} md={8} className={classes.typeContentWrapper}>
               <Container maxWidth='lg'>
                 {data.skill.database.map((e, i) => (
-                  <Typography key={i} variant='h5'>
+                  <Typography key={i} variant='h4'>
                     {e}
                   </Typography>
                 ))}
@@ -121,13 +121,13 @@ const SkillHolder: React.FC = () => {
             <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
               <Container maxWidth='lg'>
                 <UpdateIcon fontSize='large' color='secondary' />
-                <Typography variant='h4'>Version</Typography>
+                <Typography variant='h3'>Version</Typography>
               </Container>
             </Grid>
             <Grid item xs={6} md={8} className={classes.typeContentWrapper}>
               <Container maxWidth='lg'>
                 {data.skill.version.map((e, i) => (
-                  <Typography key={i} variant='h5'>
+                  <Typography key={i} variant='h4'>
                     {e}
                   </Typography>
                 ))}
@@ -140,13 +140,13 @@ const SkillHolder: React.FC = () => {
             <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
               <Container maxWidth='lg'>
                 <BuildIcon fontSize='large' color='secondary' />
-                <Typography variant='h4'>Devops</Typography>
+                <Typography variant='h3'>Devops</Typography>
               </Container>
             </Grid>
             <Grid item xs={6} md={8} className={classes.typeContentWrapper}>
               <Container maxWidth='lg'>
                 {data.skill.devops.map((e, i) => (
-                  <Typography key={i} variant='h5'>
+                  <Typography key={i} variant='h4'>
                     {e}
                   </Typography>
                 ))}
@@ -159,13 +159,13 @@ const SkillHolder: React.FC = () => {
             <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
               <Container maxWidth='lg'>
                 <DashboardIcon fontSize='large' color='secondary' />
-                <Typography variant='h4'>CMS</Typography>
+                <Typography variant='h3'>CMS</Typography>
               </Container>
             </Grid>
             <Grid item xs={6} md={8} className={classes.typeContentWrapper}>
               <Container maxWidth='lg'>
                 {data.skill.CMS.map((e, i) => (
-                  <Typography key={i} variant='h5'>
+                  <Typography key={i} variant='h4'>
                     {e}
                   </Typography>
                 ))}

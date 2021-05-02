@@ -25,15 +25,17 @@ const ProjectCard: React.FC<ProjectProps> = (props: ProjectProps) => {
   return (
     <Paper elevation={0} className={classes.root}>
       <div className={classes.titleWrapper}>
-        <Typography variant='h5' className={classes.title} component='a' href={props.live}>
+        <Typography variant='h3' className={classes.title} component='a' href={props.live}>
           {props.title}
         </Typography>
-        <GitHubIcon
-          className={classes.titleIcon}
-          onClick={() => {
-            window.open(props.github);
-          }}
-        />
+        {props.github && (
+          <GitHubIcon
+            className={classes.titleIcon}
+            onClick={() => {
+              window.open(props.github);
+            }}
+          />
+        )}
         {props.live && (
           <OpenInNewIcon
             className={classes.titleIcon}
@@ -48,7 +50,7 @@ const ProjectCard: React.FC<ProjectProps> = (props: ProjectProps) => {
       <ul className={classes.descWrapper}>
         {props.desc.map((e, i) => (
           <li key={i}>
-            <Typography variant='h6' className={classes.desc}>
+            <Typography variant='body2' className={classes.desc}>
               {e}
             </Typography>
           </li>
@@ -57,7 +59,7 @@ const ProjectCard: React.FC<ProjectProps> = (props: ProjectProps) => {
 
       <Divider className={classes.divider} />
       {props.tech.map((e, i) => (
-        <Typography key={i} display='inline' variant='body1' className={classes.tech}>
+        <Typography key={i} display='inline' variant='caption' className={classes.tech}>
           {e}
         </Typography>
       ))}
@@ -104,7 +106,7 @@ const projectCardStyles = makeStyles((theme: Theme) => ({
 
   tech: {
     '&:not(:last-child):after': {
-      content: '" - "',
+      content: '", "',
     },
   },
 }));

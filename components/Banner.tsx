@@ -1,7 +1,9 @@
 import React from 'react';
-import { Container, Grid, Typography, Avatar } from '@material-ui/core';
-import { makeStyles, Theme } from '@material-ui/core/styles';
 
+import Image from 'next/image';
+//  mui
+import { Container, Grid, Typography } from '@material-ui/core';
+import { makeStyles, Theme } from '@material-ui/core/styles';
 //  mui icons
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -14,14 +16,14 @@ const Banner: React.FC = () => {
   return (
     <Container maxWidth='lg'>
       <Grid container>
-        <Grid item xs={12} md={4} className={classes.avatarWrapper}>
+        <Grid item xs={12} md={4} className={classes.iconWrapper}>
           <Container maxWidth='lg'>
             <Grid container direction='column' alignContent='center' alignItems='center'>
-              <Avatar alt='Jingfu' src='/avatar.png' className={classes.avatar} />
-              <Typography variant='h2' component='h1' className={classes.name}>
-                Jingfu Dong
-              </Typography>
-              <Typography variant='h5' className={classes.role}>
+              <div className={classes.avatarWrapper}>
+                <Image src='/avatar.png' alt='Jingfu' layout='fill' className={classes.avatar} />
+              </div>
+              <Typography variant='h1'>Jingfu Dong</Typography>
+              <Typography variant='h3' className={classes.role}>
                 Full-stack developer
               </Typography>
               <Grid container className={classes.logoWrapper}>
@@ -66,12 +68,11 @@ const Banner: React.FC = () => {
               className={classes.introWrapper}
             >
               <Typography variant='h2'>About me</Typography>
-              <Typography variant='h5' component='p' className={classes.about}>
+              <Typography component='p' className={classes.about}>
                 I am a self-motivated full-stack developer passionate about web development,
                 primarily{' '}
                 <Typography
                   color='secondary'
-                  variant='h5'
                   component='span'
                   display='inline'
                   className={classes.about}
@@ -81,7 +82,7 @@ const Banner: React.FC = () => {
                 +{' '}
                 <Typography
                   color='secondary'
-                  variant='h5'
+                  variant='body1'
                   component='span'
                   display='inline'
                   className={classes.about}
@@ -90,12 +91,12 @@ const Banner: React.FC = () => {
                 </Typography>
                 .
               </Typography>
-              <Typography variant='h5' component='p' className={classes.about}>
+              <Typography variant='body1' component='p' className={classes.about}>
                 Development job has never been just a job for me, it is a lifestyle that offered
                 engaging challenges to continuous learning and improvement of my skills. I am keen
                 on learning.
               </Typography>
-              <Typography variant='h5' component='p' className={classes.about}>
+              <Typography variant='body1' component='p' className={classes.about}>
                 I care about clean code and keen on improving my skills. I’m looking for the right
                 opportunity to contribute to the projects that make me proud.
               </Typography>
@@ -103,16 +104,16 @@ const Banner: React.FC = () => {
               <Grid container>
                 <Grid item xs={12} sm={6} className={classes.eduWrapper}>
                   <SchoolIcon />
-                  <Typography variant='h5'>Master of IT, 2017</Typography>
-                  <Typography color='textSecondary' variant='h6'>
+                  <Typography variant='h3'>Master of IT, 2017</Typography>
+                  <Typography color='textSecondary' variant='caption'>
                     University of Wollongong, Wollongong
                   </Typography>
-                  <Typography variant='h6'>Enterprise Network</Typography>
+                  <Typography variant='h4'>Enterprise Network</Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} className={classes.eduWrapper}>
                   <SchoolIcon />
-                  <Typography variant='h5'>Bachelor of IT, 2015</Typography>
-                  <Typography color='textSecondary' variant='h6'>
+                  <Typography variant='h3'>Bachelor of IT, 2015</Typography>
+                  <Typography color='textSecondary' variant='caption'>
                     Beijing University of Technology, Beijing
                   </Typography>
                 </Grid>
@@ -128,9 +129,8 @@ const Banner: React.FC = () => {
 export default Banner;
 
 const useStyles = makeStyles((theme: Theme) => ({
-  name: { fontFamily: "'Roboto Slab', serif" },
   role: { color: theme.palette.text.secondary },
-  avatarWrapper: {
+  iconWrapper: {
     borderRight: `2px solid ${theme.palette.divider}`,
     '@media(max-width:960px)': {
       borderBottom: `2px solid ${theme.palette.divider}`,
@@ -138,7 +138,10 @@ const useStyles = makeStyles((theme: Theme) => ({
       paddingBottom: theme.spacing(4),
     },
   },
-  avatar: {
+  avatarWrapper: {
+    position: 'relative',
+    borderRadius: '50%',
+    overflow: 'hidden',
     height: 250,
     width: 250,
     border: `4px solid ${theme.palette.secondary.main}`,
@@ -149,6 +152,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     marginBottom: theme.spacing(8),
   },
+  avatar: { objectFit: 'cover' },
   introWrapper: {
     '@media(max-width:960px)': {
       paddingTop: theme.spacing(4),

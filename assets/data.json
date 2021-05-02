@@ -46,6 +46,17 @@
   ],
   "project": [
     {
+      "title": "Hammer Capital News",
+      "desc": [
+        "Headless CMS blog",
+        "Static generation",
+        "Upgrade from old WordPress website to increase render speed/SEO"
+      ],
+      "live": "https://hammercapitalnews.com/",
+      "tech": ["TypeScript", "React", "NextJS", "Material UI", "WordPress", "Graphql"],
+      "img": "s"
+    },
+    {
       "title": "Minesweeper Clone",
       "desc": ["Clone of Window game MineSweeper", "Practicing TypeScript"],
       "live": "https://cocky-meninsky-1cd43d.netlify.app/",
@@ -61,14 +72,7 @@
       ],
       "live": "https://sharp-ramanujan-84a1e6.netlify.app/",
       "github": "https://github.com/Dongongngg/simple-blog",
-      "tech": [
-        "TypeScript",
-        "React",
-        "Material UI",
-        "Axios",
-        "React Router",
-        "useContext"
-      ],
+      "tech": ["TypeScript", "React", "Material UI", "Axios", "React Router", "useContext"],
       "img": "s"
     },
     {
@@ -104,10 +108,7 @@
     },
     {
       "title": "My Portfolio",
-      "desc": [
-        "Using Material UI theme to create reusable styles and layouts",
-        "This page"
-      ],
+      "desc": ["Using Material UI theme to create reusable styles and layouts", "This page"],
       "live": "https://www.jingfudong.com",
       "github": "https://github.com/Dongongngg/portfolio-new",
       "tech": ["TypeScript", "React", "Material UI"],

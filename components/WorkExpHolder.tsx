@@ -41,14 +41,14 @@ const MyTimeLineItem: React.FC<MyTimeLineProps> = (props: MyTimeLineProps) => {
       </TimelineSeparator>
       <TimelineContent className={classes.contentWrapper}>
         <MyPaper elevation={0}>
-          <Typography variant='h5' className={classes.title}>
+          <Typography variant='h3' className={classes.title}>
             {props.title}
           </Typography>
-          <Typography display='inline' variant='h6' color='textSecondary'>
+          <Typography display='inline' variant='caption' color='textSecondary'>
             {props.company},
           </Typography>
 
-          <Typography display='inline' variant='body2' color='textSecondary'>
+          <Typography display='inline' variant='caption' color='textSecondary'>
             {' '}
             {props.location}
           </Typography>
@@ -60,7 +60,7 @@ const MyTimeLineItem: React.FC<MyTimeLineProps> = (props: MyTimeLineProps) => {
           <ul className={classes.desc}>
             {props.desc.map((e, i) => (
               <li key={i}>
-                <Typography variant='body1'>{e}</Typography>
+                <Typography variant='body2'>{e}</Typography>
               </li>
             ))}
           </ul>
