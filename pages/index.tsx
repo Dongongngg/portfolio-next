@@ -1,5 +1,6 @@
 import React from 'react';
 import { NextSeo } from 'next-seo';
+import { NextPage } from 'next';
 //  components
 import NavBar from '../components/NavBar';
 import Banner from '../components/Banner';
@@ -10,7 +11,12 @@ import Footer from '../components/Footer';
 //  layout
 import PortfolioLayout from '../layouts/Portfolio';
 
-const LandingPage: React.FC = () => {
+import useTranslation from 'next-translate/useTranslation';
+
+const LandingPage: NextPage = () => {
+  const { t } = useTranslation('common');
+  const title = t('site_title');
+  const description = t('site_desc');
   return (
     <>
       <NextSeo
@@ -18,8 +24,8 @@ const LandingPage: React.FC = () => {
         description='Full-stack developer'
         openGraph={{
           url: 'https://www.jingfudong.com',
-          title: 'Jingfu Dong',
-          description: 'Full-stack developer',
+          title: title,
+          description: description,
           images: [
             {
               url: '/avatar.jpg',
@@ -28,7 +34,7 @@ const LandingPage: React.FC = () => {
               alt: 'Jingfu Dong',
             },
           ],
-          site_name: 'Jingfu Dong portfolio',
+          site_name: title,
         }}
       />
 

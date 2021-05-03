@@ -10,6 +10,7 @@ import StorageIcon from '@material-ui/icons/Storage';
 import UpdateIcon from '@material-ui/icons/Update';
 import BuildIcon from '@material-ui/icons/Build';
 import DashboardIcon from '@material-ui/icons/Dashboard';
+import CloudIcon from '@material-ui/icons/Cloud';
 //  components
 import SubTitle from './Title';
 //  data
@@ -17,163 +18,60 @@ import data from '../assets/data.json';
 
 const SkillHolder: React.FC = () => {
   const classes = useStyles();
+  const skills = data.skill;
+
+  const skillItems = [];
+
+  const renderIcon = (title: string) => {
+    if (title === 'language') {
+      return <CodeIcon fontSize='large' color='secondary' />;
+    } else if (title === 'frontend') {
+      return <FlipToFrontIcon fontSize='large' color='secondary' />;
+    } else if (title === 'UI') {
+      return <FlipToFrontIcon fontSize='large' color='secondary' />;
+    } else if (title === 'backend') {
+      return <FlipToBackIcon fontSize='large' color='secondary' />;
+    } else if (title === 'database') {
+      return <StorageIcon fontSize='large' color='secondary' />;
+    } else if (title === 'devops') {
+      return <BuildIcon fontSize='large' color='secondary' />;
+    } else if (title === 'version') {
+      return <UpdateIcon fontSize='large' color='secondary' />;
+    } else if (title === 'CMS') {
+      return <DashboardIcon fontSize='large' color='secondary' />;
+    } else if (title === 'AWS') {
+      return <CloudIcon fontSize='large' color='secondary' />;
+    }
+  };
+
+  for (const [key, value] of Object.entries(skills)) {
+    skillItems.push(
+      <Grid item xs={12} md={6} className={classes.typeWrapper} key={key}>
+        <Grid container>
+          <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
+            <Container maxWidth='lg'>
+              {renderIcon(key)}
+              <Typography variant='h3'>{key}</Typography>
+            </Container>
+          </Grid>
+          <Grid item xs={6} md={8} className={classes.typeContentWrapper}>
+            <Container maxWidth='lg'>
+              {value.map((e, i) => (
+                <Typography key={i} variant='h4'>
+                  {e}
+                </Typography>
+              ))}
+            </Container>
+          </Grid>
+        </Grid>
+      </Grid>,
+    );
+  }
+
   return (
     <Container maxWidth='lg'>
       <SubTitle name='My Skills' />
-      <Grid container>
-        <Grid item xs={12} md={6} className={classes.typeWrapper}>
-          <Grid container>
-            <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
-              <Container maxWidth='lg'>
-                <CodeIcon fontSize='large' color='secondary' />
-                <Typography variant='h3'>Language</Typography>
-              </Container>
-            </Grid>
-            <Grid item xs={6} md={8} className={classes.typeContentWrapper}>
-              <Container maxWidth='lg'>
-                {data.skill.language.map((e, i) => (
-                  <Typography key={i} variant='h4'>
-                    {e}
-                  </Typography>
-                ))}
-              </Container>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item xs={12} md={6} className={classes.typeWrapper}>
-          <Grid container>
-            <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
-              <Container maxWidth='lg'>
-                <FlipToFrontIcon fontSize='large' color='secondary' />
-                <Typography variant='h3'>Front-end</Typography>
-              </Container>
-            </Grid>
-            <Grid item xs={6} md={8} className={classes.typeContentWrapper}>
-              <Container maxWidth='lg'>
-                {data.skill.frontend.map((e, i) => (
-                  <Typography key={i} variant='h4'>
-                    {e}
-                  </Typography>
-                ))}
-              </Container>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item xs={12} md={6} className={classes.typeWrapper}>
-          <Grid container>
-            <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
-              <Container maxWidth='lg'>
-                <FlipToFrontIcon fontSize='large' color='secondary' />
-                <Typography variant='h3'>UI</Typography>
-              </Container>
-            </Grid>
-            <Grid item xs={6} md={8} className={classes.typeContentWrapper}>
-              <Container maxWidth='lg'>
-                {data.skill.ui.map((e, i) => (
-                  <Typography key={i} variant='h4'>
-                    {e}
-                  </Typography>
-                ))}
-              </Container>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item xs={12} md={6} className={classes.typeWrapper}>
-          <Grid container>
-            <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
-              <Container maxWidth='lg'>
-                <FlipToBackIcon fontSize='large' color='secondary' />
-                <Typography variant='h3'>Back-end</Typography>
-              </Container>
-            </Grid>
-            <Grid item xs={6} md={8} className={classes.typeContentWrapper}>
-              <Container maxWidth='lg'>
-                {data.skill.backend.map((e, i) => (
-                  <Typography key={i} variant='h4'>
-                    {e}
-                  </Typography>
-                ))}
-              </Container>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item xs={12} md={6} className={classes.typeWrapper}>
-          <Grid container>
-            <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
-              <Container maxWidth='lg'>
-                <StorageIcon fontSize='large' color='secondary' />
-                <Typography variant='h3'>Database</Typography>
-              </Container>
-            </Grid>
-            <Grid item xs={6} md={8} className={classes.typeContentWrapper}>
-              <Container maxWidth='lg'>
-                {data.skill.database.map((e, i) => (
-                  <Typography key={i} variant='h4'>
-                    {e}
-                  </Typography>
-                ))}
-              </Container>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item xs={12} md={6} className={classes.typeWrapper}>
-          <Grid container>
-            <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
-              <Container maxWidth='lg'>
-                <UpdateIcon fontSize='large' color='secondary' />
-                <Typography variant='h3'>Version</Typography>
-              </Container>
-            </Grid>
-            <Grid item xs={6} md={8} className={classes.typeContentWrapper}>
-              <Container maxWidth='lg'>
-                {data.skill.version.map((e, i) => (
-                  <Typography key={i} variant='h4'>
-                    {e}
-                  </Typography>
-                ))}
-              </Container>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item xs={12} md={6} className={classes.typeWrapper}>
-          <Grid container>
-            <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
-              <Container maxWidth='lg'>
-                <BuildIcon fontSize='large' color='secondary' />
-                <Typography variant='h3'>Devops</Typography>
-              </Container>
-            </Grid>
-            <Grid item xs={6} md={8} className={classes.typeContentWrapper}>
-              <Container maxWidth='lg'>
-                {data.skill.devops.map((e, i) => (
-                  <Typography key={i} variant='h4'>
-                    {e}
-                  </Typography>
-                ))}
-              </Container>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item xs={12} md={6} className={classes.typeWrapper}>
-          <Grid container>
-            <Grid item xs={6} md={4} className={classes.typeTitleWrapper}>
-              <Container maxWidth='lg'>
-                <DashboardIcon fontSize='large' color='secondary' />
-                <Typography variant='h3'>CMS</Typography>
-              </Container>
-            </Grid>
-            <Grid item xs={6} md={8} className={classes.typeContentWrapper}>
-              <Container maxWidth='lg'>
-                {data.skill.CMS.map((e, i) => (
-                  <Typography key={i} variant='h4'>
-                    {e}
-                  </Typography>
-                ))}
-              </Container>
-            </Grid>
-          </Grid>
-        </Grid>
-      </Grid>
+      <Grid container>{skillItems.map(value => value)}</Grid>
     </Container>
   );
 };

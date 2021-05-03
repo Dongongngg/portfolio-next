@@ -30,7 +30,7 @@ const MyTimeLineItem: React.FC<MyTimeLineProps> = (props: MyTimeLineProps) => {
     <TimeLineItemFluid className={classes.root}>
       <Hidden xsDown>
         <TimelineOppositeContent>
-          <Typography color='textSecondary' variant='h6'>
+          <Typography color='textSecondary' variant='h3'>
             {props.date}
           </Typography>
         </TimelineOppositeContent>

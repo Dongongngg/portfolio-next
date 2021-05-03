@@ -10,9 +10,13 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import DescriptionIcon from '@material-ui/icons/Description';
 import SchoolIcon from '@material-ui/icons/School';
+//  translate
+import useTranslation from 'next-translate/useTranslation';
 
 const Banner: React.FC = () => {
   const classes = useStyles();
+  const { t } = useTranslation('common');
+
   return (
     <Container maxWidth='lg'>
       <Grid container>
@@ -22,9 +26,9 @@ const Banner: React.FC = () => {
               <div className={classes.avatarWrapper}>
                 <Image src='/avatar.png' alt='Jingfu' layout='fill' className={classes.avatar} />
               </div>
-              <Typography variant='h1'>Jingfu Dong</Typography>
+              <Typography variant='h1'>{t('name')}</Typography>
               <Typography variant='h3' className={classes.role}>
-                Full-stack developer
+                {t('role')}
               </Typography>
               <Grid container className={classes.logoWrapper}>
                 <GitHubIcon
@@ -67,54 +71,49 @@ const Banner: React.FC = () => {
               alignContent='center'
               className={classes.introWrapper}
             >
-              <Typography variant='h2'>About me</Typography>
+              <Typography variant='h2'>{t('about_me_title')}</Typography>
               <Typography component='p' className={classes.about}>
-                I am a self-motivated full-stack developer passionate about web development,
-                primarily{' '}
+                {t('about_me_1')}{' '}
                 <Typography
                   color='secondary'
                   component='span'
                   display='inline'
                   className={classes.about}
                 >
-                  JavaScript/TypeScript
+                  {t('hightlight_skill_1')}
                 </Typography>{' '}
                 +{' '}
                 <Typography
                   color='secondary'
-                  variant='body1'
                   component='span'
                   display='inline'
                   className={classes.about}
                 >
-                  NodeJS
+                  {t('hightlight_skill_2')}
                 </Typography>
-                .
+                {'.'}
               </Typography>
               <Typography variant='body1' component='p' className={classes.about}>
-                Development job has never been just a job for me, it is a lifestyle that offered
-                engaging challenges to continuous learning and improvement of my skills. I am keen
-                on learning.
+                {t('about_me_2')}
               </Typography>
               <Typography variant='body1' component='p' className={classes.about}>
-                I care about clean code and keen on improving my skills. I’m looking for the right
-                opportunity to contribute to the projects that make me proud.
+                {t('about_me_3')}
               </Typography>
 
               <Grid container>
                 <Grid item xs={12} sm={6} className={classes.eduWrapper}>
                   <SchoolIcon />
-                  <Typography variant='h3'>Master of IT, 2017</Typography>
+                  <Typography variant='h3'>{t('edu_title_1')}</Typography>
                   <Typography color='textSecondary' variant='caption'>
-                    University of Wollongong, Wollongong
+                    {t('edu_uni_1')}
                   </Typography>
-                  <Typography variant='h4'>Enterprise Network</Typography>
+                  <Typography variant='h4'>{t('edu_major_1')}</Typography>
                 </Grid>
                 <Grid item xs={12} sm={6} className={classes.eduWrapper}>
                   <SchoolIcon />
-                  <Typography variant='h3'>Bachelor of IT, 2015</Typography>
+                  <Typography variant='h3'>{t('edu_title_2')}</Typography>
                   <Typography color='textSecondary' variant='caption'>
-                    Beijing University of Technology, Beijing
+                    {t('edu_uni_2')}
                   </Typography>
                 </Grid>
               </Grid>

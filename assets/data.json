@@ -2,12 +2,13 @@
   "skill": {
     "language": ["HTML", "(S)CSS", "JavaScript(ES6)", "TypeScript"],
     "frontend": ["React", "Vue", "NextJS", "NuxtJS", "Gatsby"],
-    "ui": ["Material UI", "BootStrap"],
+    "UI": ["Material UI", "BootStrap"],
     "backend": ["NodeJS", "NestJS", "Express", "Graphql", "Apollo Server"],
     "database": ["MySQL", "MongoDB"],
+    "CMS": ["WordPress", "WP-graphql"],
+    "AWS": ["EC2", "Elastic Beanstalk", "CodePipeline"],
     "devops": ["Docker"],
-    "version": ["Git", "GitHub"],
-    "CMS": ["WordPress"]
+    "version": ["Git", "GitHub"]
   },
   "work": [
     {
@@ -84,14 +85,14 @@
       "live": "https://aqueous-dawn-60527.herokuapp.com/",
       "github": "https://github.com/Dongongngg/job-listing",
       "tech": [
-        "Node",
+        "NodeJS",
         "React",
         "React Router",
         "Express",
         "Mongoose",
         "MongoDB",
         "JWT",
-        "REST api"
+        "REST API"
       ],
       "img": "s"
     },
@@ -107,11 +108,11 @@
       "img": "s"
     },
     {
-      "title": "My Portfolio",
-      "desc": ["Using Material UI theme to create reusable styles and layouts", "This page"],
+      "title": "This Portfolio",
+      "desc": ["Static generation", " Material UI theming"],
       "live": "https://www.jingfudong.com",
-      "github": "https://github.com/Dongongngg/portfolio-new",
-      "tech": ["TypeScript", "React", "Material UI"],
+      "github": "https://github.com/Dongongngg/portfolio-next",
+      "tech": ["TypeScript", "React", "NextJS", "Material UI"],
       "img": "s"
     }
   ]
