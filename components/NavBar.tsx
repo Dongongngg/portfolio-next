@@ -23,6 +23,7 @@ import Brightness2Icon from '@material-ui/icons/Brightness2';
 
 import setLanguage from 'next-translate/setLanguage';
 import useTranslation from 'next-translate/useTranslation';
+import ThemeContext from '../contexts/theme';
 
 const naviItem = ['about', 'skill', 'work', 'projects'];
 //  scroll to location - height of navbar
@@ -67,7 +68,7 @@ const NavDrawer: React.FC<any> = ({ handleToggle }) => {
 
 const NavBar: React.FC = () => {
   const classes = useStyles();
-
+  const [themeName, setThemeName] = React.useContext(ThemeContext);
   const { lang } = useTranslation('common');
 
   const [openNav, setOpenNav] = useState<boolean>(false);
@@ -76,11 +77,19 @@ const NavBar: React.FC = () => {
     setOpenNav(!openNav);
   };
 
+  const handleTheme = () => {
+    if (themeName === 'light') {
+      setThemeName('dark');
+    } else {
+      setThemeName('light');
+    }
+  };
+
   return (
     <AppBar position='fixed' className={classes.appBar} id='nav-bar'>
       <Toolbar>
         <Hidden smUp>
-          <MenuIcon onClick={toggleDrawer} />
+          <MenuIcon onClick={toggleDrawer} style={{ zIndex: 1 }} />
           <Drawer
             anchor='left'
             open={openNav}
@@ -111,9 +120,25 @@ const NavBar: React.FC = () => {
               CN
             </Button>
           )}
-          <Button startIcon={<Brightness1Icon />} color='inherit' size='large'>
-            Light
-          </Button>
+          {themeName === 'light' ? (
+            <Button
+              startIcon={<Brightness1Icon />}
+              color='inherit'
+              size='large'
+              onClick={handleTheme}
+            >
+              Light
+            </Button>
+          ) : (
+            <Button
+              startIcon={<Brightness2Icon />}
+              color='inherit'
+              size='large'
+              onClick={handleTheme}
+            >
+              Dark
+            </Button>
+          )}
         </div>
         <Hidden xsDown>
           <Typography variant='h3' className={classes.title} onClick={() => scrollToId('about')}>
@@ -142,11 +167,11 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     appBar: {
       color: theme.palette.text.disabled,
-      backgroundColor: theme.palette.text.primary,
+      backgroundColor: theme.palette.primary.main,
     },
     drawerWrapper: {
       backgroundColor: theme.palette.text.primary,
-      color: theme.palette.text.disabled,
+      color: theme.palette.text.secondary,
     },
     title: {
       cursor: 'pointer',
@@ -156,6 +181,7 @@ const useStyles = makeStyles((theme: Theme) =>
       width: '100%',
       textAlign: 'center',
       left: 0,
+      zIndex: 0,
     },
     itemWrapper: {
       marginLeft: 'auto',
@@ -168,14 +194,14 @@ const drawerStyles = makeStyles((theme: Theme) => ({
     width: 200,
   },
   drawerTitle: {
-    color: theme.palette.text.disabled,
+    color: theme.palette.text.secondary,
     padding: theme.spacing(3),
   },
   listItem: {
-    color: theme.palette.text.disabled,
+    color: theme.palette.text.secondary,
     padding: theme.spacing(2),
   },
   listIcon: {
-    color: theme.palette.text.disabled,
+    color: theme.palette.text.secondary,
   },
 }));

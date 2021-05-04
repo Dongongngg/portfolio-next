@@ -101,6 +101,7 @@ const projectCardStyles = makeStyles((theme: Theme) => ({
   descWrapper: {
     listStyleType: 'circle !important',
     paddingInlineStart: `${theme.spacing(2)}px !important`,
+    color: theme.palette.text.secondary,
   },
   desc: {},
 
