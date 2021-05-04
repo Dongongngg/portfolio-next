@@ -67,7 +67,7 @@ export default Footer;
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    backgroundColor: theme.palette.text.primary,
+    backgroundColor: theme.palette.primary.main,
     color: theme.palette.text.disabled,
   },
   navWrapper: {

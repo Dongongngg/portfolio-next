@@ -1,20 +1,20 @@
 import { createMuiTheme, responsiveFontSizes, Theme } from '@material-ui/core/styles';
 
-let theme: Theme = createMuiTheme({
+let lightTheme: Theme = createMuiTheme({
   spacing: 8,
   palette: {
     text: {
       primary: '#303030',
       secondary: '#787586',
-      disabled: '#fff',
+      disabled: '#ffffff',
     },
     primary: {
-      main: '#989898',
-      light: '#B3B1C3',
+      main: '#303030',
+      light: '#787586',
     },
     secondary: {
       main: '#8685EF',
-      light: '#F2ECFF',
+      light: '#C6C0F8',
     },
     divider: '#787586',
     background: {
@@ -76,6 +76,6 @@ let theme: Theme = createMuiTheme({
   },
 });
 
-theme = responsiveFontSizes(theme);
+lightTheme = responsiveFontSizes(lightTheme);
 
-export default theme;
+export default lightTheme;
