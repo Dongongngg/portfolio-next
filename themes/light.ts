@@ -5,7 +5,7 @@ let lightTheme: Theme = createMuiTheme({
   palette: {
     text: {
       primary: '#303030',
-      secondary: '#787586',
+      secondary: '#ACA9BB',
       disabled: '#ffffff',
     },
     primary: {

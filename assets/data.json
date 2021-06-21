@@ -29,8 +29,9 @@
       "date": "May 2020 - Aug 2020",
       "location": "Wynyard",
       "desc": [
-        "Develop and implement front UI and backend logic of a property management web application",
-        "Create and update API, manage database"
+        "Work with 6 other interns",
+        "Develop and implement UI/backend logic/database for a property management web application",
+        "Create and update API"
       ]
     },
     {
@@ -47,15 +48,26 @@
   ],
   "project": [
     {
+      "title": "Tradeproofer Portal",
+      "desc": [
+        "Work with 3 overseas developers",
+        "Create user-friendly dashboard UI and widgets/charts based on design",
+        "Server-side rendering"
+      ],
+      "live": "https://tradeproofer.com/client",
+      "tech": ["TypeScript", "Vue", "NuxtJS", "Graphql","Bootstrap", "SCSS"],
+      "img": ""
+    },
+    {
       "title": "Hammer Capital News",
       "desc": [
         "Headless CMS blog",
         "Static generation",
-        "Upgrade from old WordPress website to increase render speed/SEO"
+        "Upgrade from old WordPress website for better performance/SEO"
       ],
       "live": "https://hammercapitalnews.com/",
       "tech": ["TypeScript", "React", "NextJS", "Material UI", "WordPress", "Graphql"],
-      "img": "s"
+      "img": ""
     },
     {
       "title": "Minesweeper Clone",
@@ -63,18 +75,18 @@
       "live": "https://cocky-meninsky-1cd43d.netlify.app/",
       "github": "https://github.com/Dongongngg/minesweeper",
       "tech": ["TypeScript", "React", "SCSS"],
-      "img": "s"
+      "img": ""
     },
     {
       "title": "SimpleBlog",
       "desc": [
-        "Fetch data from a WordPress site's api, display content as a blog page",
+        "Fetch data from WordPress API, display content as a blog page",
         "Clean design"
       ],
       "live": "https://sharp-ramanujan-84a1e6.netlify.app/",
       "github": "https://github.com/Dongongngg/simple-blog",
       "tech": ["TypeScript", "React", "Material UI", "Axios", "React Router", "useContext"],
-      "img": "s"
+      "img": ""
     },
     {
       "title": "Job List",
@@ -94,7 +106,7 @@
         "JWT",
         "REST API"
       ],
-      "img": "s"
+      "img": ""
     },
     {
       "title": "Storytelling Game",
@@ -105,7 +117,7 @@
       "live": "https://eduf3037-game.netlify.app/",
       "github": "https://github.com/Dongongngg/eduf3037-game",
       "tech": ["React", "SASS"],
-      "img": "s"
+      "img": ""
     },
     {
       "title": "This Portfolio",
@@ -113,7 +125,7 @@
       "live": "https://www.jingfudong.com",
       "github": "https://github.com/Dongongngg/portfolio-next",
       "tech": ["TypeScript", "React", "NextJS", "Material UI"],
-      "img": "s"
+      "img": ""
     }
   ]
 }

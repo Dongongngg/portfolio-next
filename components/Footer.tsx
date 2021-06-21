@@ -80,15 +80,18 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   icon: { cursor: 'pointer' },
   claim: {
+    fontSize: '10px',
+    paddingTop: theme.spacing(2),
     '@media(max-width:768px)': {
       textAlign: 'center',
-      fontSize: '12px',
+      fontSize: '10px',
     },
   },
 
   claimName: {
+    fontSize: '10px',
     '@media(max-width:768px)': {
-      fontSize: '12px',
+      fontSize: '10px',
     },
   },
 }));
