@@ -4,15 +4,33 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 import { ServerStyleSheets } from '@material-ui/core/styles';
 
-import theme from '../themes/light';
-
 export default class MyDocument extends Document {
   render() {
     return (
       <Html lang='en'>
         <Head>
-          {/* PWA primary color */}
-          <meta name='theme-color' content={theme.palette.secondary.main} />
+          <link rel='manifest' href='/manifest.json' />
+          <link rel='icon' href='/icons/app-icon-192.png' />
+          <link rel='apple-touch-icon' href='/icons/app-icon-192.png' />
+          {/* Google Analytics */}
+          {process.env.GA_ID && (
+            <>
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_ID}`}
+              ></script>
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag(){dataLayer.push(arguments);}
+                      gtag('js', new Date());
+                      gtag('config', '${process.env.GA_ID}');
+            `,
+                }}
+              />
+            </>
+          )}
           <link
             rel='stylesheet'
             href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap'
